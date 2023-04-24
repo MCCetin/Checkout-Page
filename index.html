@@ -1,95 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
 
-    <link rel="icon" href="devchallenges.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/assets/devchallenges.png" />
+  <link rel="stylesheet" href="/reset.css" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/queries.css" />
+  <script src="https://kit.fontawesome.com/d079bbe9e1.js" crossorigin="anonymous"></script>
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+  <title>Checkout Page</title>
+</head>
 
-    <title>Devchallenges</title>
+<body>
+  <div class="container">
+    <header>
+      <h1>Checkout</h1>
+    </header>
+    <main>
+      <div class="cart">
+        <div class="cart-item">
+          <img src="assets/photo1.png" alt="" />
+          <div class="cart-item-info">
+            <span class="cart-item-name">Vintage Backbag</span>
+            <div>
+              <span class="cart-item-newprice">$54.99</span>
+              <span class="cart-item-oldprice">$94.99</span>
+            </div>
+            <div class="amount">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img src="assets/photo2.png" alt="" />
+          <div class="cart-item-info">
+            <span class="cart-item-name">Vintage Backbag</span>
+            <div>
+              <span class="cart-item-newprice">$91.99</span>
+              <span class="cart-item-oldprice">$124.99</span>
+            </div>
+            <div class="amount">
+              <button>-</button>
+              <span>1</span>
+              <button>+</button>
+            </div>
+          </div>
+        </div>
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+        <div class="cost">
+          <span>Shipping</span>
+          <span>$19</span>
+        </div>
 
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+        <div class="cost">
+          <span>Total</span>
+          <span>$165.99</span>
+        </div>
       </div>
+      <form>
+        <ul>
+          <h2>Contact information</h2>
+          <li>
+            <label for="email">E-Mail</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="Enter your email..." />
+            </div>
+          </li>
+          <li>
+            <label for="phone">Phone</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-phone"></i>
+              <input type="text" id="phone" name="phoneNumber" placeholder="Enter your phone..." />
+            </div>
+          </li>
+          <h2>Shipping address</h2>
+          <li>
+            <label for="name">Full name</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-circle-user"></i>
+              <input type="text" id="name" name="fullName" placeholder="Your full name..." />
+            </div>
+          </li>
+          <li>
+            <label for="Address">Address</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-house"></i>
+              <input type="text" id="address" name="address" placeholder="Your address..." />
+            </div>
+          </li>
+          <li>
+            <label for="city">City</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-city"></i>
+              <input type="text" id="city" name="city" placeholder="Your city..." />
+            </div>
+          </li>
+          <li>
+            <label for="country">Country</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-earth-americas"></i>
+              <select id="country" name="country">
+                <option value="turkey">Turkey</option>
+                <option value="germany">Germany</option>
+                <option value="netherlands">Netherlands</option>
+              </select>
+            </div>
+          </li>
+          <li>
+            <label for="postalCode">Postal Code</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-envelopes-bulk"></i>
+              <input type="text" id="postalCode" name="postalCode" placeholder="Your postal code..." />
+            </div>
+          </li>
+          <li>
+            <label for="postalCode">Postal Code</label>
+            <div class="wrapper">
+              <i class="fa-solid fa-envelopes-bulk"></i>
+              <input type="text" id="postalCode" name="postalCode" placeholder="Your postal code..." />
+            </div>
+          </li>
+          <li class="checkbox">
+            <input type="checkbox" id="save" name="save" />
+            <label class="" for="save">Save this informations for next time</label>
+          </li>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
-  </body>
+          <button class="submit">Continue</button>
+        </ul>
+      </form>
+
+
+    </main>
+
+    <footer>
+      <p>created by Muhammed Can Çetin - devChallenges.io</p>
+    </footer>
+  </div>
+</body>
+
 </html>
